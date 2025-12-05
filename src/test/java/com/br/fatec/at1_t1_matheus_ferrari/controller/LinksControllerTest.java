@@ -16,7 +16,7 @@ class LinksControllerTest {
     void deveRetornarTodosOsLinks() {
         List<Map<String, String>> links = controller.getLinks();
         assertEquals(2, links.size());
-        assertEquals("Programação de Dispositivos Móveis", links.get(0).get("curso"));
+        assertEquals("Programação de dispositivos móveis", links.get(0).get("curso"));
     }
 
     // 2. Teste para buscar link por ID existente

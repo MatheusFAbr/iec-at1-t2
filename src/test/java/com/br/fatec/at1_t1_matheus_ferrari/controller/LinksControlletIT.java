@@ -30,8 +30,8 @@ class LinksControllerIT {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").isArray())
                 .andExpect(jsonPath("$.length()").value(2))
-                .andExpect(jsonPath("$[0].curso").value("Programação de Dispositivos Móveis"))
-                .andExpect(jsonPath("$[1].curso").value("Técnicas de Programação 1"));
+                .andExpect(jsonPath("$[0].curso").value("Programação de dispositivos móveis"))
+                .andExpect(jsonPath("$[1].curso").value("Técnicas de programação 1"));
     }
 
     @Test
@@ -39,7 +39,7 @@ class LinksControllerIT {
         mockMvc.perform(get("/atv/links/1"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value("1"))
-                .andExpect(jsonPath("$.curso").value("Programação de Dispositivos Móveis"));
+                .andExpect(jsonPath("$.curso").value("Programação de dispositivos móveis"));
     }
 
     @Test
